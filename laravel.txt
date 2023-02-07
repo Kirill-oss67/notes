@@ -1,0 +1,36 @@
+composer create-project laravel/laravel название папки с проектом -- создание проекта на ларавел последней версии через композер
+composer create-project laravel/laravel:^8.6.11 название папки с проектом -- создание проекта на ларавел 8.0 версии через композер
+php artisan serve -- запустить проект 
+php artisan make:controller имя контроллера -- создать контроллер
+-- в app/provides надо раскомитить namespace, чтобы роут и контроллер друг друга видели
+php artisan make:model <имя модели> -m -- создать модель и миграцию к ней
+-- в файле .env(переменная окружения с секретными данными) указать название базы данных 
+php artisan migrate -- накатить миграции
+php artisan migrate:rollback -- откатить миграции на один этап назад 
+php artisan migrate:fresh -- обновить миграции
+php artisan make:migration название миграции_to_название таблицы_table -- создаст новую миграцию 
+php artisan make:migration delete_column_description_to_posts_table -- создаст новую миграцию, чтобы удалить указанную колонку(параметр) в указанной таблице
+php artisan migrate:Fresh -- обноваляет миграции
+
+composer require doctrine/dbal -- установить расширение для доп возможностей с composer при работе с базой данных
+composer require laravel/ui -- установка доп расширения для Bootstrap в laravel
+php artisan ui bootstrap -- установка Bootstrap 
+
+
+php artisan make:request <название класса> -- создать класс request
+заходим и в  public function authorize() ставим return true;
+
+php artisan make:factory PostFactory -m Post -- пример создания фабрики
+
+php artisan migrate --seed -- включить работу фабрик
+
+ php artisan ui:auth -- подключить авторизацию для пользователей
+
+php artisan make:middleware adminpanelmiddleware  -- пример создания мидлвара и далее надо в Http/kernel.php его зарегать(мидлвары нужны для создания контроля доступа)
+
+php artisan make:resource Post/PostResource -- пример создания ресурса, для перевода данных из обьекта в json и отправки на фронт
+
+
+https://jwt-auth.readthedocs.io/en/develop/laravel-installation/ -- инструкция для подключения jwt
+
+
